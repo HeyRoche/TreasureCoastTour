@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="150dp">
+
+
+    <ImageView
+        android:scaleType="centerCrop"
+        android:id="@+id/imageAll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/happymike" />
+
+
+    <TextView
+        android:id="@+id/tour_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:text="Test Horse Back Tours "
+        android:textSize="24sp" />
+
+
+
+    <Button
+        android:textColor="@android:color/white"
+        android:id="@+id/learnBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="137dp"
+        android:layout_marginTop="91dp"
+        android:background="@android:color/transparent"
+        android:text="Learn More" />
+
+
+
+</RelativeLayout>

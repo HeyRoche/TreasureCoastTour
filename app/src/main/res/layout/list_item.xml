@@ -13,7 +13,8 @@
         android:layout_height="match_parent"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:src="@drawable/happymike" />
+        android:src="@drawable/happymike"
+        android:layout_alignParentLeft="true" />
 
 
     <TextView
@@ -29,18 +30,16 @@
         android:textSize="24sp" />
 
 
-
-    <Button
-        android:textColor="@android:color/white"
-        android:id="@+id/learnBtn"
+    <TextView
+        android:id="@+id/learnTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="137dp"
-        android:layout_marginTop="91dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="17dp"
         android:background="@android:color/transparent"
-        android:text="Learn More" />
+        android:text="@string/learn"
+        android:textColor="@android:color/white" />
 
 
 

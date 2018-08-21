@@ -1,6 +1,7 @@
 package com.example.rojo.treasurecoasttour;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.annotation.NonNull;
@@ -17,6 +18,9 @@ import org.w3c.dom.Text;
 import java.util.ArrayList;
 
 public class TourAdapter extends ArrayAdapter<Tour> {
+
+    private Context mContext;
+
 
 
     public TourAdapter(Activity context, ArrayList<Tour> tours) {
@@ -39,9 +43,12 @@ public class TourAdapter extends ArrayAdapter<Tour> {
         tourTextView.setText(currentTour.getTourHeadline());
 
 
+
         ImageView image = (ImageView) listItemView.findViewById(R.id.imageAll);
         image.setImageResource(currentTour.getImageResourceId());
 
         return listItemView;
     }
+
+
 }

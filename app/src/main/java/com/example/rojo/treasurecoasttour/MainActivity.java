@@ -1,12 +1,11 @@
 package com.example.rojo.treasurecoasttour;
 
-import android.content.Intent;
-import android.net.Uri;
+
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.CardView;
-import android.view.View;
-import android.widget.Button;
+;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,48 +13,32 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+    // Set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
 
-        //CardView is selected once selected the matching fragment xml will be displayed
-        CardView eatView = (CardView) findViewById(R.id.cardEat);
-        eatView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent eatAct = new Intent(MainActivity.this, EatActivity.class);
-                startActivity(eatAct);
-            }
-        });
+        // Find the view pager that will allow the user to swipe between fragments
+        ViewPager viewPager = findViewById(R.id.viewpager);
+
+        // Create an adapter that knows which fragment should be shown on each page
+        CategoryAdapter adapter = new CategoryAdapter(this, getSupportFragmentManager());
+
+        // Set the adapter onto the view pager
+        viewPager.setAdapter(adapter);
+
+    // Find the tab layout that shows the tabs
+        TabLayout tabLayout = findViewById(R.id.tabs);
+
+        // Connect the tab layout with the view pager. This will
+        //   1. Update the tab layout when the view pager is swiped
+        //   2. Update the view pager when a tab is selected
+        //   3. Set the tab layout's tab names with the view pager's adapter's titles
+        //      by calling onPageTitle()
+        tabLayout.setupWithViewPager(viewPager);
 
 
-        //CardView is selected once selected the matching fragment xml will be displayed
-        CardView playView = (CardView) findViewById(R.id.cardPlay);
-        playView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent playAct = new Intent(MainActivity.this, PlayActivity.class);
-                startActivity(playAct);
-            }
-        });
+}
 
-        //CardView is selected once selected the matching fragment xml will be displayed
-        CardView shopView = (CardView) findViewById(R.id.cardShop);
-        shopView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent shopView = new Intent(MainActivity.this, ShopActivity.class);
-                startActivity(shopView);
-            }
-        });
-
-        //CardView is selected once selected the matching fragment xml will be displayed
-        CardView exploreView = (CardView) findViewById(R.id.cardExplore);
-        exploreView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent exploreAct = new Intent(MainActivity.this, ExploreActivity.class);
-                startActivity(exploreAct);
-            }
-        });
 
    }
-}
+

@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">TreasureCoastTour</string>
     <string name="title_activity_eat">EatActivity</string>
-    <string name="fox">www.foxnews.com</string>
+    <string name="Eat">EAT</string>
+    <string name="Shop">SHOP</string>
+    <string name="Play">PLAY</string>
+    <string name="Explore">EXPLORE</string>
+    <string name="learn">Learn More</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

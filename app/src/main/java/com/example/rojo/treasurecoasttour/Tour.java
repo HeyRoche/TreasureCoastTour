@@ -3,7 +3,7 @@ package com.example.rojo.treasurecoasttour;
 public class Tour {
 
     private String mTourHeadline;
-    public String mLinkURL;
+    private String mLinkURL;
     private int mImageResourceID;
 
     public Tour(String tourHeadline, String linkUrl,  int imageResourceId){
@@ -17,5 +17,4 @@ public class Tour {
         public String getLinkURL(){return mLinkURL;}
 
         public int getImageResourceId(){return mImageResourceID;}
-
 }

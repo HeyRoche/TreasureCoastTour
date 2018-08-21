@@ -19,9 +19,6 @@ import java.util.ArrayList;
 
 public class TourAdapter extends ArrayAdapter<Tour> {
 
-    private Context mContext;
-
-
 
     public TourAdapter(Activity context, ArrayList<Tour> tours) {
         super(context, 0, tours);
@@ -42,13 +39,9 @@ public class TourAdapter extends ArrayAdapter<Tour> {
         TextView tourTextView = (TextView) listItemView.findViewById(R.id.tour_text_view);
         tourTextView.setText(currentTour.getTourHeadline());
 
-
-
         ImageView image = (ImageView) listItemView.findViewById(R.id.imageAll);
         image.setImageResource(currentTour.getImageResourceId());
 
         return listItemView;
     }
-
-
 }
